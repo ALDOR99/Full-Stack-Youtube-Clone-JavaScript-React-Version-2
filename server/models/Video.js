@@ -1,12 +1,11 @@
 import mongoose from "mongoose";
-// ------------------------------------------
+
 const VideoSchema = new mongoose.Schema(
   {
     userId: {
       type: String,
       required: true,
     },
-
     title: {
       type: String,
       required: true,
@@ -27,17 +26,14 @@ const VideoSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-
     tags: {
       type: [String],
       default: [],
     },
-
-    like: {
+    likes: {
       type: [String],
       default: [],
     },
-
     dislikes: {
       type: [String],
       default: [],
@@ -45,5 +41,5 @@ const VideoSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-// ------------------------------------------
+
 export default mongoose.model("Video", VideoSchema);

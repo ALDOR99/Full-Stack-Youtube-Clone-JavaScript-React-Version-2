@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-// ------------------------------------------
+
 const CommentSchema = new mongoose.Schema(
   {
     userId: {
@@ -17,5 +17,5 @@ const CommentSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-// ------------------------------------------
+
 export default mongoose.model("Comment", CommentSchema);

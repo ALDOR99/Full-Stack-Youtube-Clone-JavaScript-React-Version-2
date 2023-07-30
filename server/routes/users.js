@@ -9,7 +9,7 @@ import {
   dislike,
 } from "../controllers/user.js";
 import { verifyToken } from "../verifyToken.js";
-// ---------------------------------
+
 const router = express.Router();
 
 //update user
@@ -32,5 +32,5 @@ router.put("/like/:videoId", verifyToken, like);
 
 //dislike a video
 router.put("/dislike/:videoId", verifyToken, dislike);
-// ---------------------------------
+
 export default router;
