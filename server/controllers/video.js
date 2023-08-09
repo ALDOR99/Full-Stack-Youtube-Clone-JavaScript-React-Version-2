@@ -102,7 +102,6 @@ export const sub = async (req, res, next) => {
   }
 };
 
-// ------------------------------------------------------------
 export const getByTag = async (req, res, next) => {
   const tags = req.query.tags.split(",");
   try {
@@ -113,7 +112,6 @@ export const getByTag = async (req, res, next) => {
   }
 };
 
-// ------------------------------------------------------------
 export const search = async (req, res, next) => {
   const query = req.query.q;
   try {
@@ -125,4 +123,3 @@ export const search = async (req, res, next) => {
     next(err);
   }
 };
-// ------------------------------------------------------------
